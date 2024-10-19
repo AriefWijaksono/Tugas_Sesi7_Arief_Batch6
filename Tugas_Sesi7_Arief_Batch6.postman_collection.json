@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "79bcaa15-68d7-44c5-85de-963227df0da3",
+		"name": "Tugas_Sesi7_Arief_Batch6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38903405"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const schema = {\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"page\": { \"type\": \"integer\" },\r",
+							"    \"per_page\": { \"type\": \"integer\" },\r",
+							"    \"total\": { \"type\": \"integer\" },\r",
+							"    \"data\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": {\r",
+							"        \"type\": \"object\",\r",
+							"        \"properties\": {\r",
+							"          \"id\": { \"type\": \"integer\" },\r",
+							"          \"email\": { \"type\": \"string\" },\r",
+							"          \"first_name\": { \"type\": \"string\" },\r",
+							"          \"last_name\": { \"type\": \"string\" },\r",
+							"          \"avatar\": { \"type\": \"string\" }\r",
+							"        }\r",
+							"      }\r",
+							"    }\r",
+							"  }\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Valid JSON schema\", function () {\r",
+							"  pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const schema = {\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"page\": { \"type\": \"integer\" },\r",
+							"    \"per_page\": { \"type\": \"integer\" },\r",
+							"    \"total\": { \"type\": \"integer\" },\r",
+							"    \"data\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": {\r",
+							"        \"type\": \"object\",\r",
+							"        \"properties\": {\r",
+							"          \"id\": { \"type\": \"integer\" },\r",
+							"          \"email\": { \"type\": \"string\" },\r",
+							"          \"first_name\": { \"type\": \"string\" },\r",
+							"          \"last_name\": { \"type\": \"string\" },\r",
+							"          \"avatar\": { \"type\": \"string\" }\r",
+							"        }\r",
+							"      }\r",
+							"    }\r",
+							"  }\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Valid JSON schema\", function () {\r",
+							"  pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"morpheus\",\r\n  \"job\": \"leader\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const schema = {\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"page\": { \"type\": \"integer\" },\r",
+							"    \"per_page\": { \"type\": \"integer\" },\r",
+							"    \"total\": { \"type\": \"integer\" },\r",
+							"    \"data\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": {\r",
+							"        \"type\": \"object\",\r",
+							"        \"properties\": {\r",
+							"          \"id\": { \"type\": \"integer\" },\r",
+							"          \"email\": { \"type\": \"string\" },\r",
+							"          \"first_name\": { \"type\": \"string\" },\r",
+							"          \"last_name\": { \"type\": \"string\" },\r",
+							"          \"avatar\": { \"type\": \"string\" }\r",
+							"        }\r",
+							"      }\r",
+							"    }\r",
+							"  }\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Valid JSON schema\", function () {\r",
+							"  pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const schema = {\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"page\": { \"type\": \"integer\" },\r",
+							"    \"per_page\": { \"type\": \"integer\" },\r",
+							"    \"total\": { \"type\": \"integer\" },\r",
+							"    \"data\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": {\r",
+							"        \"type\": \"object\",\r",
+							"        \"properties\": {\r",
+							"          \"id\": { \"type\": \"integer\" },\r",
+							"          \"email\": { \"type\": \"string\" },\r",
+							"          \"first_name\": { \"type\": \"string\" },\r",
+							"          \"last_name\": { \"type\": \"string\" },\r",
+							"          \"avatar\": { \"type\": \"string\" }\r",
+							"        }\r",
+							"      }\r",
+							"    }\r",
+							"  }\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Valid JSON schema\", function () {\r",
+							"  pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"morpheus\",\r\n  \"job\": \"zion resident\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
